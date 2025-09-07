@@ -57,9 +57,10 @@ st.markdown("""
 def load_data():
     # Option 1: Load from the same GitHub repository (recommended)
     # Upload your practice.xlsx file to your GitHub repo and use the raw URL
-    candidates_details_excel_url = "https://github.com/Harshithareddy9/Recruitment-Analytics-Dashboard/blob/e2264cda7fe0ca60379d768104792777972f54c2/CandidateDetails.xlsx"
+    candidates_details_excel_url = "https://raw.githubusercontent.com/Harshithareddy9/Recruitment-Analytics-Dashboard/e2264cda7fe0ca60379d768104792777972f54c2/CandidateDetails.xlsx"
 
-    recruitment_activity_excel_url = "https://github.com/Harshithareddy9/Recruitment-Analytics-Dashboard/blob/e2264cda7fe0ca60379d768104792777972f54c2/RecruitingActivity.xlsx"
+    recruitment_activity_excel_url = "https://raw.githubusercontent.com/Harshithareddy9/Recruitment-Analytics-Dashboard/e2264cda7fe0ca60379d768104792777972f54c2/RecruitingActivity.xlsx"
+
     
     # Download the file
     response1 = requests.get(candidates_details_excel_url)
