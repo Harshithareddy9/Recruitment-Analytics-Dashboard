@@ -308,7 +308,7 @@ with tab2:
         title="Hire Conversion Rate by Application Source",
         color="Hired Percent",
         color_continuous_scale="greens",
-        height=400
+        height=500
     )
     fig_hire_rate.update_traces(textposition="outside")
     fig_hire_rate.update_layout(
@@ -318,7 +318,7 @@ with tab2:
     )
 
     st.plotly_chart(fig_hire_rate, use_container_width=True)
-
+    
     # Offer acceptance vs declined rates by source
     offer_extended_candidates = candidates_df[
         candidates_df['Furthest Recruiting Stage Reached'].str.contains('Offer', na=False)
@@ -690,7 +690,7 @@ with tab4:
     # Update traces for a modern, shining appearance
     fig_grid.update_traces(
         textposition='outside',
-        textfont=dict(size=10, color='rgba(0,0,0,0.8)'),
+        textfont=dict(size=10),
         marker=dict(
             line=dict(
                 color='rgba(255,255,255,0.9)',  # Very subtle white border for shine effect
@@ -706,9 +706,7 @@ with tab4:
         xaxis_title="Position Title",
         yaxis_title="Average Duration (Days)",
         legend_title="Process Stage",
-        font=dict(family="Segoe UI, Arial, sans-serif", size=12, color='rgba(0,0,0,0.8)'),
-        plot_bgcolor='rgba(248,250,252,0.9)',  # Very light, almost white background
-        paper_bgcolor='rgba(255,255,255,0.95)',  # Slightly transparent paper
+        font=dict(family="Segoe UI, Arial, sans-serif", size=12),
         title_font_size=20,
         title_x=0.5,  # Center the title
         hovermode='x unified'
