@@ -55,8 +55,7 @@ st.markdown("""
 # Load data function with caching
 @st.cache_data
 def load_data():
-    # Option 1: Load from the same GitHub repository (recommended)
-    # Upload your practice.xlsx file to your GitHub repo and use the raw URL
+    # Option 1: Load dat from the GitHub
     candidates_details_excel_url = "https://raw.githubusercontent.com/Harshithareddy9/Recruitment-Analytics-Dashboard/e2264cda7fe0ca60379d768104792777972f54c2/CandidateDetails.xlsx"
 
     recruitment_activity_excel_url = "https://raw.githubusercontent.com/Harshithareddy9/Recruitment-Analytics-Dashboard/e2264cda7fe0ca60379d768104792777972f54c2/RecruitingActivity.xlsx"
@@ -89,7 +88,7 @@ st.markdown("---")
 
 # Overview metrics
 st.markdown('<h2 class="section-header">Key Metrics</h2>', unsafe_allow_html=True)
-
+#Adding Key Metrics to Dashboard
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 with col1:
     total_candidates = candidates_df['Candidate ID Number'].nunique()
@@ -287,7 +286,7 @@ with tab1:
     """)
 
 with tab2:
-    # Source Analysis
+    # Application Source Analysis
     st.markdown('<h2 class="section-header">Performance by Application Source</h2>', unsafe_allow_html=True)
 
     # Hire conversion rate by source
@@ -427,7 +426,7 @@ with tab2:
  """)
 
 with tab3:
-    # Position Analysis
+    # Position Level Analysis
     st.markdown('<h2 class="section-header">Performance by Position</h2>', unsafe_allow_html=True)
 
     # Calculate time to hire by position
@@ -634,7 +633,7 @@ with tab3:
 
 
 with tab4:
-    # Process Analysis
+    # Hiring Process Analysis
     st.markdown('<h2 class="section-header">Hiring Process Analysis</h2>', unsafe_allow_html=True)
     
     # Calculate stage durations
