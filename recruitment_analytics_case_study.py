@@ -359,7 +359,7 @@ with tab2:
             "Acceptance Rate": "#2E8B57",
             "Declined Rate": "#DC143C"
         },
-        height=400
+        height=500
     )
 
     fig_offer.update_traces(textposition='outside')
@@ -394,7 +394,7 @@ with tab2:
         title="Average Time from Application-to-Offer by Application Source (Days)",
         color="time_to_offer",
         color_continuous_scale="Viridis", 
-        height=400
+        height=500
     )
     fig_tto_source.update_traces(textposition="outside", texttemplate='%{text} days')
     fig_tto_source.update_layout(
